@@ -65,9 +65,10 @@ const regex11 = /112*/g;
 console.log(taget8.match(regex10));
 console.log(taget8.match(regex11));
 
-
-
-
-
+const target12 = 'This is "Regex Hunting"';
+// 名前付きキャプチャした文字列を、\k<quote>で呼び出します。
+const regex12 = /(?<quote>['"])(.*?)\k<quote>/g;
+console.log(target.match(regex12));
+// => ['"Regex Hunting"']
 
 
