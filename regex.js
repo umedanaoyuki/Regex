@@ -87,3 +87,8 @@ const regex14 = /\d{3}(?=yen)/g;
 console.log(target14);
 console.log(target14.match(regex14)); // => ['100']
 
+const target15 = 'This water(500ml) is 100yen';
+// mlの数字にマッチする正規表現
+// 3桁の数字の後ろにyenという文字列がないような3桁の数字にマッチします。
+const regex15 = /\d{3}(?!yen)/g;
+console.log(target15.match(regex15)); // => ['500']
