@@ -77,3 +77,13 @@ console.log(target.match(regex12));
 const target13 = 'Python JavaScript Java';
 // Java(Script)?は、JavaScript, Javaにマッチする正規表現です。
 const regex13 = /Java(Script)?/g;
+
+
+//肯定の先読み
+const target14 = 'This water(100ml) is 100yen';
+// 金額の数字にマッチする正規表現
+// 3桁の数字の後ろにyenという文字列があるような3桁の数字にマッチします。
+const regex14 = /\d{3}(?=yen)/g;
+console.log(target14);
+console.log(target14.match(regex14)); // => ['100']
+
