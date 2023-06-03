@@ -39,13 +39,22 @@ console.log(target5.match(regex5));
 
 //最大量指定子+は、直前の1文字に1回以上の繰り返しマッチという意味を表し、最大量指定子*は、直前の1文字に0回以上の繰り返しマッチという意味
 const target6 = 'ck cook coook cooook';
-
 // * 存在しなくてもいい、+ 1文字以上は存在する必要がある
 const regex6 = /co*k/g; // co*kは、ck cook coook cooookにマッチする正規表現
 const regex7 = /co+k/g; // co+kは、cook coook cooookにマッチする正規表現
-
 console.log(target6.match(regex6));
 console.log(target6.match(regex7));
+
+//最大量指定子{min,max}は、直前の1文字にmin回以上、max回以上の繰り返しマッチという意味を表します。
+//例えば、\dは1桁の数字にマッチする為、\d{3,5}は3桁以上、5桁以下の数字にマッチします。
+const target7 = '150 is greater than 15.';
+
+const regex8 = /\d{3}/g;
+const regex9 = /\d{2,3}/g;
+
+console.log(target7.match(regex8));
+console.log(target7.match(regex9));
+
 
 
 
