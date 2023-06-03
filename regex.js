@@ -92,3 +92,21 @@ const target15 = 'This water(500ml) is 100yen';
 // 3桁の数字の後ろにyenという文字列がないような3桁の数字にマッチします。
 const regex15 = /\d{3}(?!yen)/g;
 console.log(target15.match(regex15)); // => ['500']
+
+//選択
+const target16 = 'This is React This is JavaScript';
+const regex16 = /This is React|JavaScript/g; // 選択のみを使用した正規表現
+const regex17 = /This is (React|JavaScript)/g; // キャプチャグループと選択を使用した正規表現
+console.log("選択")
+console.log(target16.match(regex16)); // => ['This is React', 'JavaScript']
+console.log(target16.match(regex17)); // => ['This is React', 'This is JavaScript']
+
+//アンカー
+const target18 = 'cat dog cat';
+const regex18 = /cat/g;
+// ^でターゲット文字列の行頭にマッチさせます。ターゲット文字列の行頭にマッチした後、
+// 残りの正規表現catが、ターゲット文字列にマッチするか調べます。
+// そのため、2番目のcatではなく、1番目のcatにのみマッチします。
+const regex19= /^cat/g;
+console.log(target18.match(regex18)); // => ['cat', 'cat']
+console.log(target18.match(regex19)); // => ['cat']
