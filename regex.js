@@ -55,6 +55,16 @@ const regex9 = /\d{2,3}/g;
 console.log(target7.match(regex8));
 console.log(target7.match(regex9));
 
+//2文字以上の文字を繰り返したい場合はどうすれば良いのでしょうか？ 
+//答えはキャプチャグループ((...))を使用することです。
+const taget8 = '1,112,11212,1121212';
+
+const regex10 = /1(12)*/g;
+const regex11 = /112*/g;
+
+console.log(taget8.match(regex10));
+console.log(taget8.match(regex11));
+
 
 
 
