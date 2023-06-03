@@ -71,4 +71,9 @@ const regex12 = /(?<quote>['"])(.*?)\k<quote>/g;
 console.log(target.match(regex12));
 // => ['"Regex Hunting"']
 
+//正規表現のマッチについて
 
+// 正規表現を適用させる文字列
+const target13 = 'Python JavaScript Java';
+// Java(Script)?は、JavaScript, Javaにマッチする正規表現です。
+const regex13 = /Java(Script)?/g;
